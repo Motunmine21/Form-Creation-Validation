@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Select the form
     const form = document.getElementById("registration-form");
 
-    // Select the feedback division
+    
     const feedbackDiv = document.getElementById("form-feedback");
 
-    // Listen for form submission
+    
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Stop form from submitting
+        event.preventDefault(); 
 
-        // Get and trim input values
+        
         const username = document.getElementById("username").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
-            feedbackDiv.style.color = "#28a745"; // green
+            feedbackDiv.style.color = "#28a745"; 
         } else {
             feedbackDiv.innerHTML = messages.join("<br>");
-            feedbackDiv.style.color = "#dc3545"; // red
+            feedbackDiv.style.color = "#dc3545"; 
         }
     });
 });
